@@ -1,2 +1,2 @@
 # linux-setup-scripts
-Scripts to automate some of the tedious parts of setting up my Linux install the way I like them.
+Automating my Linux config one script at a time. Will eventually probably just end up with dotfiles.
