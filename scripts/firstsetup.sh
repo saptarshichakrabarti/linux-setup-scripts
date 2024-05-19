@@ -15,7 +15,7 @@ sudo apt update -y
 sudo apt upgrade -y
 #
 # Install necessary packages, including zsh for OhMyZsh+PowerLevel10k
-sudo apt install -y git curl wget nala zsh
+sudo apt install -y git curl wget cmake zsh
 #
 # Download JetBrains Mono font
 echo "Downloading Pro Font..."
