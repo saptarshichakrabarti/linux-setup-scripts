@@ -15,6 +15,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # Install PowerLevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
+# Comment out existing ZSH_THEME line in .zshrc
+sed -i 's/^ZSH_THEME=/##&/' ~/.zshrc
+
 # Configure Zsh theme in .zshrc
 echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc
 
