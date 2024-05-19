@@ -21,6 +21,12 @@ sed -i 's/^ZSH_THEME=/##&/' ~/.zshrc
 # Configure Zsh theme in .zshrc
 echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc
 
+# Source the updated .zshrc to apply changes
+source ~/.zshrc
+
+# Inform the user to restart the terminal
+echo "Please close and reopen your terminal to apply the changes."
+
 # Download and run Anaconda installer
 wget https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh -O ~/Anaconda3-2024.02-1-Linux-x86_64.sh
 sh ~/Anaconda3-2024.02-1-Linux-x86_64.sh
