@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 #
 # Automated System Setup Script
-# to run, execute:
-# 1. sh firstsetup.sh
+# to run, execute: sh firstsetup.sh
 #
 # Author: Saptarshi Chakrabarti
 #
