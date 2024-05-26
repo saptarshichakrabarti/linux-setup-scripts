@@ -18,8 +18,11 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 # Comment out existing ZSH_THEME line in .zshrc
 sed -i 's/^ZSH_THEME=/##&/' ~/.zshrc
 
+# Insert new ZSH_THEME line below the existing (now commented out) ZSH_THEME line
+sed -i '/^##ZSH_THEME=/a ZSH_THEME="powerlevel10k/powerlevel10k"' ~/.zshrc
+
 # Configure Zsh theme in .zshrc
-echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc
+# echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc
 
 # Source the updated .zshrc to apply changes
 source ~/.zshrc
