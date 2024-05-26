@@ -14,6 +14,9 @@ conda activate minihack
 # Install necessary packages
 sudo apt install -y cmake build-essential autoconf libtool pkg-config python3-dev python3-pip python3-numpy git flex bison libbz2-dev
 
+# Install nle
+pip install nle
+
 # Install MiniHack
 pip install minihack
 
