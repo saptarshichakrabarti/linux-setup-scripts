@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 #
 # Automated System Setup Script
-# to run, execute: sh secondexecute.sh
+# to run, execute: sh powerlevel10k_anacondainstall.sh
 #
 # Author: Saptarshi Chakrabarti
 #
-# Description: This script automates the setup process for after a fresh Linux installation is done.
-# It updates and upgrades the system, installs necessary packages, downloads fonts for the terminal,
-# sets up the Zsh shell, and reboots the system.
+# Description: This script sets up PowerLevel10k and installs Anaconda.
+# Need to run post_install_setup.sh first to have Zsh and PowerFonts installed.
 
 # Install OhMyZsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
