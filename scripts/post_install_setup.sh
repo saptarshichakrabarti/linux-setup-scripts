@@ -33,9 +33,9 @@ echo "Updating and upgrading the system..." | tee -a $LOGFILE
 sudo apt update -y && sudo apt upgrade -y | tee -a $LOGFILE
 check_success "System update and upgrade"
 
-# Install necessary packages, including zsh for OhMyZsh+PowerLevel10k
+# Install necessary packages, including zsh
 echo "Installing necessary packages..." | tee -a $LOGFILE
-sudo apt install -y git curl wget cmake zsh unzip | tee -a $LOGFILE
+sudo apt install -y git curl wget cmake zsh unzip ffmpeg libfuse2t64 | tee -a $LOGFILE
 check_success "Package installation"
 
 # Download ProFont font
