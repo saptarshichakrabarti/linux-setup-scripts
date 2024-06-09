@@ -7,7 +7,7 @@
 #
 # Description: This script automates the post-installation setup process for a fresh Linux installation.
 # It updates and upgrades the system, installs necessary packages, downloads and installs fonts for the terminal,
-# sets up the Zsh shell, installs the Starship prompt, applies a Starship theme, and prompts for a system reboot.
+# sets up the Zsh shell, installs the Starship prompt, applies a Starship theme, and prompts for additional software installations and a system reboot.
 #
 
 # Log file
@@ -104,6 +104,38 @@ case "$theme_choice" in
     ;;
   * )
     echo "Invalid choice. No theme applied." | tee -a $LOGFILE
+    ;;
+esac
+
+# Prompt user to choose whether to install VLC
+read -p "Do you want to install VLC? (y/n): " vlc_choice
+case "$vlc_choice" in
+  y|Y )
+    echo "Installing VLC..." | tee -a $LOGFILE
+    sudo apt install -y vlc | tee -a $LOGFILE
+    check_success "VLC installation"
+    ;;
+  n|N )
+    echo "You chose not to install VLC." | tee -a $LOGFILE
+    ;;
+  * )
+    echo "Invalid choice. VLC not installed." | tee -a $LOGFILE
+    ;;
+esac
+
+# Prompt user to choose whether to install LibreOffice
+read -p "Do you want to install LibreOffice? (y/n): " libreoffice_choice
+case "$libreoffice_choice" in
+  y|Y )
+    echo "Installing LibreOffice..." | tee -a $LOGFILE
+    sudo apt install -y libreoffice | tee -a $LOGFILE
+    check_success "LibreOffice installation"
+    ;;
+  n|N )
+    echo "You chose not to install LibreOffice." | tee -a $LOGFILE
+    ;;
+  * )
+    echo "Invalid choice. LibreOffice not installed." | tee -a $LOGFILE
     ;;
 esac
 
