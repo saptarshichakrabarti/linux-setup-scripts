@@ -35,7 +35,7 @@ check_success "System update and upgrade"
 
 # Install necessary packages
 echo "Installing necessary packages..." | tee -a $LOGFILE
-sudo apt install -y git curl wget cmake zsh unzip ffmpeg flatpak | tee -a $LOGFILE
+sudo apt install -y git curl wget cmake zsh unzip ffmpeg python3-pip flatpak | tee -a $LOGFILE
 check_success "Package installation"
 
 # Add Flathub repository
