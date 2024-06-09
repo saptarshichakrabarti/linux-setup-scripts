@@ -7,7 +7,7 @@
 #
 # Description: This script automates the post-installation setup process for a fresh Linux installation.
 # It updates and upgrades the system, installs necessary packages, downloads and installs fonts for the terminal,
-# sets up the Zsh shell, installs the Starship prompt, and prompts for a system reboot.
+# sets up the Zsh shell, installs the Starship prompt, applies a Starship theme, and prompts for a system reboot.
 #
 
 # Log file
@@ -82,6 +82,30 @@ check_success "Starship installation"
 echo "Adding Starship initialization to ~/.zshrc..." | tee -a $LOGFILE
 echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 check_success "Adding Starship to .zshrc"
+
+# Prompt user to choose a Starship theme
+echo "Choose a Starship theme to install:"
+echo "1. Pastel Powerline"
+echo "2. Gruvbox Rainbow"
+read -p "Enter the number corresponding to your choice (1 or 2): " theme_choice
+
+case "$theme_choice" in
+  1 )
+    echo "Applying Pastel Powerline theme..." | tee -a $LOGFILE
+    mkdir -p ~/.config
+    starship preset pastel-powerline -o ~/.config/starship.toml
+    check_success "Applying pastel-powerline theme"
+    ;;
+  2 )
+    echo "Applying Gruvbox Rainbow theme..." | tee -a $LOGFILE
+    mkdir -p ~/.config
+    starship preset gruvbox-rainbow -o ~/.config/starship.toml
+    check_success "Applying gruvbox-rainbow theme"
+    ;;
+  * )
+    echo "Invalid choice. No theme applied." | tee -a $LOGFILE
+    ;;
+esac
 
 # Prompt to reboot the system - required for switching shell to Zsh
 read -p "Setup complete. Do you want to reboot now? (y/n): " choice
