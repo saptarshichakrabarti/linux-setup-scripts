@@ -33,10 +33,14 @@ echo "Updating and upgrading the system..." | tee -a $LOGFILE
 sudo apt update -y && sudo apt upgrade -y | tee -a $LOGFILE
 check_success "System update and upgrade"
 
-# Install necessary packages, including zsh
+# Install necessary packages
 echo "Installing necessary packages..." | tee -a $LOGFILE
-sudo apt install -y git curl wget cmake zsh unzip ffmpeg libfuse2t64 | tee -a $LOGFILE
+sudo apt install -y git curl wget cmake zsh unzip ffmpeg libfuse2t64 flatpak | tee -a $LOGFILE
 check_success "Package installation"
+
+# Add Flathub repository
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo | tee -a $LOGFILE
+check_success "Adding Flathub repository. Reboot needed."
 
 # Download ProFont font
 echo "Downloading Pro Font..." | tee -a $LOGFILE
