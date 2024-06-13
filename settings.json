@@ -1,0 +1,95 @@
+{
+    "latex-workshop.latex.tools": [
+                                    {
+                                    "name": "latexmk",
+                                    "command": "latexmk",
+                                    "args": [
+                                    "-synctex=1",
+                                    "-interaction=nonstopmode",
+                                    "-file-line-error",
+                                    "-pdf",
+                                    "-outdir=%OUTDIR%",
+                                    "%DOC%"
+                                    ],
+                                    "env": {"PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2024/bin/x86_64-linux/latexmk:"}
+                                    },
+                                    {
+                                    "name": "xelatex",
+                                    "command": "xelatex",
+                                    "args": [
+                                    "-synctex=1",
+                                    "-interaction=nonstopmode",
+                                    "-file-line-error",
+                                    "%DOC%"
+                                    ],
+                                    "env": {"PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2024/bin/x86_64-linux/xelatex:"}
+                                    },
+                                    {
+                                    "name": "pdflatex",
+                                    "command": "pdflatex",
+                                    "args": [
+                                    "-synctex=1",
+                                    "-interaction=nonstopmode",
+                                    "-file-line-error",
+                                    "%DOC%"
+                                    ],
+                                    "env": {"PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2024/bin/x86_64-linux/pdflatex:"}
+                                    },
+                                    {
+                                    "name": "bibtex",
+                                    "command": "bibtex",
+                                    "args": [
+                                    "%DOCFILE%"
+                                    ],
+                                    "env": {"PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2024/bin/x86_64-linux/bibtex:"}
+                                    }
+                                  ],
+    "latex-workshop.latex.recipes": [
+                                        {
+                                        "name": "pdfLaTeX",
+                                        "tools": [
+                                        "pdflatex"
+                                        ]
+                                        },
+                                        {
+                                        "name": "latexmk 🔃",
+                                        "tools": [
+                                        "latexmk"
+                                        ]
+                                        },
+                                        {
+                                        "name": "xelatex",
+                                        "tools": [
+                                        "xelatex"
+                                        ]
+                                        },
+                                        {
+                                        "name": "pdflatex ➞ bibtex ➞ pdflatex`×2",
+                                        "tools": [
+                                        "pdflatex",
+                                        "bibtex",
+                                        "pdflatex",
+                                        "pdflatex"
+                                        ]
+                                        },
+                                        {
+                                        "name": "xelatex ➞ bibtex ➞ xelatex`×2",
+                                        "tools": [
+                                        "xelatex",
+                                        "bibtex",
+                                        "xelatex",
+                                        "xelatex"
+                                        ]
+                                        }
+                                    ],
+                                    "[jsonc]": {
+                                        "editor.defaultFormatter": "esbenp.prettier-vscode"
+                                    },
+                                    "workbench.editorAssociations": {
+                                        "*.pdf": "latex-workshop-pdf-hook"
+                                    },
+                                    "[latex]": {
+                                    
+                                        "editor.defaultFormatter": "James-Yu.latex-workshop"
+                                    }
+}
