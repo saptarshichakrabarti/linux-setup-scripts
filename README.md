@@ -19,4 +19,4 @@ Automating my Linux config one script at a time.
 - custom_gnome.sh :
   - installs gnome-tweaks and gnome-tweaks-extension-manager
   - installs a bunch of other themes
-  - will eventually install some icons too
+  - [to do] integrate icon_install.sh into this
