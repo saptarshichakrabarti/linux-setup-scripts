@@ -19,8 +19,8 @@ fi
 
 # Install gnome-tweaks and gnome-shell-extensions
 echo "Installing gnome-tweaks and gnome-shell-extensions..."
-if ! sudo apt install -y gnome-tweaks gnome-shell-extensions; then
-    echo "Failed to install gnome-tweaks and gnome-shell-extensions."
+if ! sudo apt install -y gnome-tweaks gnome-shell-extension-manager; then
+    echo "Failed to install gnome-tweaks and gnome-shell-extension-manager."
     exit 1
 fi
 
@@ -56,6 +56,7 @@ done
 
 # install rimless version run: ./install.sh --tweaks float colorful nord rimless -t teal
 # install outlined version run: ./install.sh --tweaks float colorful nord -t teal
+# For theming file manager: Look inside the .themes folder in Home. There's a gtk4 folder if the theme supports it. Copy the contents of the folder to ~/.config/gtk-4.0 and logout and back in.
 
 # Prompt to install bootloader theme
 read -p "Do you want to install the bootloader theme? (yes/no): " install_bootloader
