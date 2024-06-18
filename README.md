@@ -15,3 +15,8 @@ Automating my Linux config one script at a time.
 - setup_minihack.sh :
   - tries to automate MiniHack install for Reinforcement Learning
   - sometimes it works
+
+- custom_gnome.sh :
+  - installs gnome-tweaks and gnome-tweaks-extension-manager
+  - installs a bunch of other themes
+  - will eventually install some icons too
