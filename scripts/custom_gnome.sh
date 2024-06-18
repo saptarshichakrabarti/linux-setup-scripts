@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Filename: customisation.sh
+# Filename: custom_gnome.sh
 # Author: Saptarshi Chakrabarti
-# Description: This script updates and upgrades the system, installs gnome-tweaks and gnome-shell-extensions,
+# Description: This script installs gnome-tweaks and gnome-shell-extensions,
 # prompts the user to activate the 'Dash to Panel' extension, installs the Graphite-gtk-theme with various tweaks,
 # and optionally installs a bootloader theme.
 
@@ -56,7 +56,6 @@ done
 
 # install rimless version run: ./install.sh --tweaks float colorful nord rimless -t teal
 # install outlined version run: ./install.sh --tweaks float colorful nord -t teal
-# For theming file manager: Look inside the .themes folder in Home. There's a gtk4 folder if the theme supports it. Copy the contents of the folder to ~/.config/gtk-4.0 and logout and back in.
 
 # Prompt to install bootloader theme
 read -p "Do you want to install the bootloader theme? (yes/no): " install_bootloader
@@ -75,5 +74,5 @@ if [[ "$install_bootloader" == "yes" ]]; then
     fi
 fi
 
+echo "For theming file manager: Look inside the .themes folder in Home for a gtk4 folder. Copy the contents of the folder to ~/.config/gtk-4.0 and logout and back in."
 echo "Setup complete."
-
