@@ -16,7 +16,7 @@ Automating my Linux config one script at a time.
   - tries to automate MiniHack install for Reinforcement Learning
   - sometimes it works
 
-- custom_gnome.sh :
+- customise_gnome.sh :
   - installs gnome-tweaks and gnome-tweaks-extension-manager
   - installs a bunch of other themes
-  - [to do] integrate icon_install.sh into this
+  - installs and adds GruvBox icons
