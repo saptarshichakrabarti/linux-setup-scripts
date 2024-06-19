@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#
+# ---obsolete---
 # Automated System Setup Script
 # to run, execute: sh powerlevel10k_anacondainstall.sh
 #
