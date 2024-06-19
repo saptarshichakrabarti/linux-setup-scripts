@@ -8,7 +8,7 @@ Automating my Linux config one script at a time.
   - installs Starship, sets some themes
   - installs VLC, LibreOffice
  
-- powerlevel10k_anaconda_install.sh :
+- [this one is useless now; moved to Starship] powerlevel10k_anaconda_install.sh :
   - installs OhMyZsh + PowerLevel10k theme
   - installs Anaconda
  
