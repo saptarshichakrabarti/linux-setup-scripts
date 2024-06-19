@@ -3,12 +3,8 @@
 # Filename: custom_gnome.sh
 # Author: Saptarshi Chakrabarti
 # Description: This script installs gnome-tweaks and gnome-shell-extensions,
-# prompts the user to activate the 'Dash to Panel' extension, installs the Graphite-gtk-theme with various tweaks,
-# and optionally installs a bootloader theme.
-
-set -e  # Exit immediately if a command exits with a non-zero status
-set -u  # Treat unset variables as an error and exit immediately
-set -o pipefail  # Consider a pipeline failed if any command in the pipeline fails
+# prompts the user to activate the 'Dash to Panel' extension, installs the Graphite-gtk-theme with colour tweaks,
+# installs the Gruvbox Plus icon pack, and optionally installs a bootloader theme.
 
 # Update and upgrade the system
 echo "Starting system update and upgrade..."
@@ -54,8 +50,53 @@ for tweak in "-t all" "--tweaks rimless" "--tweaks normal" "--tweaks nord" "--tw
     fi
 done
 
-# install rimless version run: ./install.sh --tweaks float colorful nord rimless -t teal
-# install outlined version run: ./install.sh --tweaks float colorful nord -t teal
+# URL of the tar.gz file to download
+URL="https://github.com/saptarshichakrabarti/linux-setup-scripts/raw/main/gruvbox-plus-icon-pack.5.4.tar.gz"
+
+# Directory where the script is being run
+SCRIPT_DIR=$(pwd)
+
+# Download the file
+echo "Downloading $URL..."
+if ! wget -q --show-progress "$URL" -P "$SCRIPT_DIR"; then
+    echo "Failed to download $URL."
+    exit 1
+fi
+
+# Extract the contents of the downloaded tar.gz file
+echo "Extracting contents..."
+if ! tar -xf "$SCRIPT_DIR/gruvbox-plus-icon-pack.5.4.tar.gz" -C "$SCRIPT_DIR"; then
+    echo "Failed to extract $SCRIPT_DIR/gruvbox-plus-icon-pack.5.4.tar.gz."
+    exit 1
+fi
+
+# Find the extracted directory name
+EXTRACTED_DIR=$(tar -tf "$SCRIPT_DIR/gruvbox-plus-icon-pack.5.4.tar.gz" | head -n 1 | cut -d '/' -f 1)
+
+if [ -z "$EXTRACTED_DIR" ]; then
+    echo "Failed to determine extracted directory name."
+    exit 1
+fi
+
+# Create .icons folder in the home directory if it doesn't exist
+ICONS_DIR="$HOME/.icons"
+mkdir -p "$ICONS_DIR"
+
+# Move extracted contents to ~/.icons folder
+echo "Moving files to $ICONS_DIR..."
+if ! mv "$SCRIPT_DIR/$EXTRACTED_DIR"/* "$ICONS_DIR"; then
+    echo "Failed to move files to $ICONS_DIR."
+    exit 1
+fi
+
+# Clean up - remove the downloaded tar.gz file
+echo "Cleaning up..."
+if ! rm "$SCRIPT_DIR/gruvbox-plus-icon-pack.5.4.tar.gz"; then
+    echo "Failed to remove $SCRIPT_DIR/gruvbox-plus-icon-pack.5.4.tar.gz."
+    exit 1
+fi
+
+echo "Gruvbox Plus icon pack installation complete."
 
 # Prompt to install bootloader theme
 read -p "Do you want to install the bootloader theme? (yes/no): " install_bootloader
