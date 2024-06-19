@@ -35,4 +35,3 @@ echo "Cleaning up..."
 rm "$DOWNLOAD_DIR/gruvbox-plus-icon-pack.5.4.tar.gz"
 
 echo "Installation complete."
-
