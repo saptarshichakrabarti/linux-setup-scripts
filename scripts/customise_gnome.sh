@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Filename: custom_gnome.sh
+# Filename: customise_gnome.sh
 # Author: Saptarshi Chakrabarti
 # Description: This script installs gnome-tweaks and gnome-shell-extensions,
 # prompts the user to activate the 'Dash to Panel' extension, installs the Graphite-gtk-theme with colour tweaks,
