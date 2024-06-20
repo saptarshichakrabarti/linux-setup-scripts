@@ -47,7 +47,7 @@
         "%DOC%"
       ],
       "env": {
-        "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2024/bin/x86_64-linux/latexmk:"
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2024/bin/x86_64-linux"
       }
     },
     {
@@ -60,7 +60,7 @@
         "%DOC%"
       ],
       "env": {
-        "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2024/bin/x86_64-linux/xelatex:"
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2024/bin/x86_64-linux"
       }
     },
     {
@@ -73,7 +73,7 @@
         "%DOC%"
       ],
       "env": {
-        "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2024/bin/x86_64-linux/pdflatex:"
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2024/bin/x86_64-linux"
       }
     },
     {
@@ -81,7 +81,7 @@
       "command": "bibtex",
       "args": ["%DOCFILE%"],
       "env": {
-        "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2024/bin/x86_64-linux/bibtex:"
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2024/bin/x86_64-linux"
       }
     }
   ],
