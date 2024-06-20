@@ -1,95 +1,113 @@
 {
-    "latex-workshop.latex.tools": [
-                                    {
-                                    "name": "latexmk",
-                                    "command": "latexmk",
-                                    "args": [
-                                    "-synctex=1",
-                                    "-interaction=nonstopmode",
-                                    "-file-line-error",
-                                    "-pdf",
-                                    "-outdir=%OUTDIR%",
-                                    "%DOC%"
-                                    ],
-                                    "env": {"PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2024/bin/x86_64-linux/latexmk:"}
-                                    },
-                                    {
-                                    "name": "xelatex",
-                                    "command": "xelatex",
-                                    "args": [
-                                    "-synctex=1",
-                                    "-interaction=nonstopmode",
-                                    "-file-line-error",
-                                    "%DOC%"
-                                    ],
-                                    "env": {"PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2024/bin/x86_64-linux/xelatex:"}
-                                    },
-                                    {
-                                    "name": "pdflatex",
-                                    "command": "pdflatex",
-                                    "args": [
-                                    "-synctex=1",
-                                    "-interaction=nonstopmode",
-                                    "-file-line-error",
-                                    "%DOC%"
-                                    ],
-                                    "env": {"PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2024/bin/x86_64-linux/pdflatex:"}
-                                    },
-                                    {
-                                    "name": "bibtex",
-                                    "command": "bibtex",
-                                    "args": [
-                                    "%DOCFILE%"
-                                    ],
-                                    "env": {"PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2024/bin/x86_64-linux/bibtex:"}
-                                    }
-                                  ],
-    "latex-workshop.latex.recipes": [
-                                        {
-                                        "name": "pdfLaTeX",
-                                        "tools": [
-                                        "pdflatex"
-                                        ]
-                                        },
-                                        {
-                                        "name": "latexmk 🔃",
-                                        "tools": [
-                                        "latexmk"
-                                        ]
-                                        },
-                                        {
-                                        "name": "xelatex",
-                                        "tools": [
-                                        "xelatex"
-                                        ]
-                                        },
-                                        {
-                                        "name": "pdflatex ➞ bibtex ➞ pdflatex`×2",
-                                        "tools": [
-                                        "pdflatex",
-                                        "bibtex",
-                                        "pdflatex",
-                                        "pdflatex"
-                                        ]
-                                        },
-                                        {
-                                        "name": "xelatex ➞ bibtex ➞ xelatex`×2",
-                                        "tools": [
-                                        "xelatex",
-                                        "bibtex",
-                                        "xelatex",
-                                        "xelatex"
-                                        ]
-                                        }
-                                    ],
-                                    "[jsonc]": {
-                                        "editor.defaultFormatter": "esbenp.prettier-vscode"
-                                    },
-                                    "workbench.editorAssociations": {
-                                        "*.pdf": "latex-workshop-pdf-hook"
-                                    },
-                                    "[latex]": {
-                                    
-                                        "editor.defaultFormatter": "James-Yu.latex-workshop"
-                                    }
+  "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 4,
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.minimap.enabled": true,
+  "git.ignoreMissingGitWarning": true,
+  "editor.fontSize": 12,
+  "editor.cursorStyle": "block",
+  "editor.cursorBlinking": "smooth",
+  "editor.occurrencesHighlight": "on",
+  "editor.selectionHighlight": true,
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.tabCompletion": "on",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "git.confirmSync": true,
+  "git.autofetch": true,
+  "git.openRepositoryInParentFolders": "always",
+  "explorer.confirmDelete": true,
+  "extensions.ignoreRecommendations": true,
+  "window.titleBarStyle": "custom",
+  "workbench.iconTheme": "vs-minimal",
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.startupEditor": "none",
+  "workbench.editor.highlightModifiedTabs": true,
+  "window.customTitleBarVisibility": "auto",
+  "terminal.integrated.inheritEnv": true, // rest is edited
+  "terminal.integrated.fontFamily": "ProFontWindows Nerd Font Mono",
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2024/bin/x86_64-linux/latexmk:"
+      }
+    },
+    {
+      "name": "xelatex",
+      "command": "xelatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ],
+      "env": {
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2024/bin/x86_64-linux/xelatex:"
+      }
+    },
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ],
+      "env": {
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2024/bin/x86_64-linux/pdflatex:"
+      }
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": ["%DOCFILE%"],
+      "env": {
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2024/bin/x86_64-linux/bibtex:"
+      }
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "pdfLaTeX",
+      "tools": ["pdflatex"]
+    },
+    {
+      "name": "latexmk 🔃",
+      "tools": ["latexmk"]
+    },
+    {
+      "name": "xelatex",
+      "tools": ["xelatex"]
+    },
+    {
+      "name": "pdflatex ➞ bibtex ➞ pdflatex`×2",
+      "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
+    },
+    {
+      "name": "xelatex ➞ bibtex ➞ xelatex`×2",
+      "tools": ["xelatex", "bibtex", "xelatex", "xelatex"]
+    }
+  ],
+  "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "workbench.editorAssociations": { "*.pdf": "latex-workshop-pdf-hook" },
+  "[latex]": { "editor.defaultFormatter": "James-Yu.latex-workshop" }
 }
