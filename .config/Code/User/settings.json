@@ -1,0 +1,39 @@
+{
+  "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": false, // slows everything down a lot
+  "editor.tabSize": 4,
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.minimap.enabled": true,
+  "git.ignoreMissingGitWarning": true,
+  "editor.fontSize": 12,
+  "editor.cursorStyle": "block",
+  "editor.cursorBlinking": "smooth",
+  "editor.occurrencesHighlight": "multiFile", // valid values: off, singleFile, multiFile
+  "editor.selectionHighlight": true,
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.tabCompletion": "on",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "git.confirmSync": true,
+  "git.autofetch": true,
+  "git.openRepositoryInParentFolders": "always",
+  "explorer.confirmDelete": false,
+  "extensions.ignoreRecommendations": true,
+  "window.titleBarStyle": "custom",
+  "workbench.iconTheme": "vs-minimal",
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.startupEditor": "none",
+  "workbench.editor.highlightModifiedTabs": true,
+  "window.customTitleBarVisibility": "auto",
+  "terminal.integrated.inheritEnv": true, // inherit the environment variables from the terminal's parent process
+  "terminal.integrated.fontFamily": "ProFontWindows Nerd Font Mono",
+  "git.enableSmartCommit": true,
+  "markdown-preview-enhanced.previewTheme": "github-dark.css", // "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+}
