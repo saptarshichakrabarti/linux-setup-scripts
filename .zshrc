@@ -18,3 +18,5 @@ unset __conda_setup
 export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH    
 export INFOPATH=$INFOPATH:/usr/local/texlive/2024/texmf-dist/doc/info
 export MANPATH=$MANPATH:/usr/local/texlive/2024/texmf-dist/doc/man
+
+export LD_LIBRARY_PATH=/home/saptarshi/anaconda3/envs/rlgpu/lib:$LD_LIBRARY_PATH
