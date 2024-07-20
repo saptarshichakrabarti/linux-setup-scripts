@@ -28,14 +28,14 @@
   "extensions.ignoreRecommendations": true,
   "window.titleBarStyle": "custom",
   "workbench.iconTheme": "vs-minimal",
-"workbench.colorTheme": "Tokyo Night",
+  "workbench.colorTheme": "Tokyo Night",
   "workbench.startupEditor": "none",
   "workbench.editor.highlightModifiedTabs": true,
   "window.customTitleBarVisibility": "auto",
   "terminal.integrated.inheritEnv": true, // inherit the environment variables from the terminal's parent process
   "terminal.integrated.fontFamily": "ProFontWindows Nerd Font Mono",
   "git.enableSmartCommit": true,
-"markdown-preview-enhanced.previewTheme": "github-dark.css",
-"python.createEnvironment.trigger": "off",
-"python.defaultInterpreterPath": "/home/saptarshi/anaconda3/bin/python"
+  "markdown-preview-enhanced.previewTheme": "github-dark.css",
+  "python.createEnvironment.trigger": "off",
+  "python.defaultInterpreterPath": "/home/saptarshi/anaconda3/bin/python"
 }
