@@ -51,7 +51,7 @@ for tweak in "-t all" "--tweaks rimless" "--tweaks normal" "--tweaks nord" "--tw
 done
 
 # URL of the tar.gz file to download
-URL="https://github.com/saptarshichakrabarti/linux-setup-scripts/raw/main/gruvbox-plus-icon-pack.5.4.tar.gz"
+URL="https://github.com/saptarshichakrabarti/linux-setup-scripts/raw/main/gruvbox.tar.gz"
 
 # Directory where the script is being run
 SCRIPT_DIR=$(pwd)
@@ -65,13 +65,13 @@ fi
 
 # Extract the contents of the downloaded tar.gz file
 echo "Extracting contents..."
-if ! tar -xf "$SCRIPT_DIR/gruvbox-plus-icon-pack.5.4.tar.gz" -C "$SCRIPT_DIR"; then
-    echo "Failed to extract $SCRIPT_DIR/gruvbox-plus-icon-pack.5.4.tar.gz."
+if ! tar -xf "$SCRIPT_DIR/gruvbox.tar.gz" -C "$SCRIPT_DIR"; then
+    echo "Failed to extract $SCRIPT_DIR/gruvbox.tar.gz."
     exit 1
 fi
 
 # Find the extracted directory name
-EXTRACTED_DIR=$(tar -tf "$SCRIPT_DIR/gruvbox-plus-icon-pack.5.4.tar.gz" | head -n 1 | cut -d '/' -f 1)
+EXTRACTED_DIR=$(tar -tf "$SCRIPT_DIR/gruvbox.tar.gz" | head -n 1 | cut -d '/' -f 1)
 
 if [ -z "$EXTRACTED_DIR" ]; then
     echo "Failed to determine extracted directory name."
@@ -79,7 +79,7 @@ if [ -z "$EXTRACTED_DIR" ]; then
 fi
 
 # Create .icons folder in the home directory if it doesn't exist
-ICONS_DIR="$HOME/.icons"
+ICONS_DIR="$HOME/.local/share/icons"
 mkdir -p "$ICONS_DIR"
 
 # Move extracted contents to ~/.icons folder
@@ -91,8 +91,8 @@ fi
 
 # Clean up - remove the downloaded tar.gz file
 echo "Cleaning up..."
-if ! rm "$SCRIPT_DIR/gruvbox-plus-icon-pack.5.4.tar.gz"; then
-    echo "Failed to remove $SCRIPT_DIR/gruvbox-plus-icon-pack.5.4.tar.gz."
+if ! rm "$SCRIPT_DIR/gruvbox.tar.gz"; then
+    echo "Failed to remove $SCRIPT_DIR/gruvbox.tar.gz."
     exit 1
 fi
 
