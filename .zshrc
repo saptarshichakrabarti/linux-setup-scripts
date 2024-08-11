@@ -20,3 +20,7 @@ export INFOPATH=$INFOPATH:/usr/local/texlive/2024/texmf-dist/doc/info
 export MANPATH=$MANPATH:/usr/local/texlive/2024/texmf-dist/doc/man
 
 export LD_LIBRARY_PATH=/home/saptarshi/anaconda3/envs/rlgpu/lib:$LD_LIBRARY_PATH
+
+export PATH="/usr/local/cuda-11.1/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/local/cuda-11.1/lib64:$LD_LIBRARY_PATH"
+export CUDA_HOME=/usr/local/cuda-11.1
