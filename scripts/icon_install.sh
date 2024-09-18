@@ -23,7 +23,7 @@ if [ -z "$EXTRACTED_DIR" ]; then
 fi
 
 # Create .icons folder in the home directory if it doesn't exist
-ICONS_DIR="$HOME/.icons"
+ICONS_DIR="$HOME/.icons/GruvboxPlus"
 mkdir -p $ICONS_DIR
 
 # Move extracted contents to ~/.icons folder
